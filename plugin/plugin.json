@@ -1,0 +1,6 @@
+{
+  "publicComponents": {
+    "waimai": "components/waimai/waimai"
+  },
+  "main": "index.js"
+}

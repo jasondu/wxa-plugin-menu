@@ -1,0 +1,38 @@
+<view class="content">
+    <!-- 分类选择 -->
+    <scroll-view class="left" scroll-y>
+        <view 
+        class="cate_item {{activeCate === index ? 'active' : ''}}"
+        wx:for="{{products}}"
+        wx:key="objectId"
+        bindtap="goCate"
+        data-index="{{index}}"
+        data-num="{{item.height}}">
+            <view class="h2">{{item.name}}</view>
+        </view>
+    </scroll-view>
+    <!-- 菜品选择 -->
+    <scroll-view class="right" scroll-y scroll-top="{{scrollTop}}">
+        <view
+        class="product"
+        wx:for="{{products}}"
+        wx:key="objectId">
+            <view class="cate_title">{{item.name}}</view>
+            <view
+            class="product_item"
+            wx:for="{{item.content}}"
+            wx:key="objectId"
+            wx:for-index="conIndex"
+            wx:for-item="conItem">
+                <view class="image_con" bindtap="see" data-src="{{conItem.images_0.url}}">
+                    <image src="{{conItem.images_0.url}}"></image>
+                </view>
+                <view class="text_con">
+                    <text class="h1">{{conItem.name}}</text>
+                    <text class="price_txt">￥{{conItem.price}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="block"></view>
+    </scroll-view>
+</view>
