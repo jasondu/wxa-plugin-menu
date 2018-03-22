@@ -1,9 +1,11 @@
 # wxa-plugin-canvas
-小程序插件-生成二维码海报
+小程序插件-点餐（菜单）插件
+
+> 已经审核通过，APPID：wxbcc0394274804acb
 
 ## 代码片段链接
 
-无
+wechatide://minicode/WH8PB6mZ6JY0
 
 ## 插件效果
 
@@ -43,4 +45,3 @@
             value: '',
         },
 ```
-> 插件还在审核中
